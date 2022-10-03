@@ -6,7 +6,7 @@ function Spinner() {
 		<div className="w-100 mx-auto">
 			<img
 				width={180}
-				classname="text-center mx-auto"
+				className="text-center mx-auto"
 				src={spinner}
 				alt="Loading..."
 			/>
