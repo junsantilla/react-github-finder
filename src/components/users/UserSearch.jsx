@@ -1,11 +1,13 @@
 import React from "react";
+
 import { useState, useContext } from "react";
 import GithubContext from "../../context/github/GithubContext";
 
 function UserSearch() {
 	const [text, setText] = useState("");
 
-	const { users, fetchUsers } = useContext(GithubContext);
+	const { users, fetchUsers, clearUsers } = useContext(GithubContext);
+
 	// const githubContext = useContext(GithubContext);
 
 	const handleChange = (e) => setText(e.target.value);
@@ -46,7 +48,9 @@ function UserSearch() {
 			</div>
 
 			<div>
-				<button className="btn btn-ghost btn-lg">Clear</button>
+				<button onClick={clearUsers} className="btn btn-ghost btn-lg">
+					Clear
+				</button>
 			</div>
 		</div>
 	);
