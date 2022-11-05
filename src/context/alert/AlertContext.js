@@ -23,7 +23,7 @@ export const AlertProvider = ({ children }) => {
 	return (
 		<AlertContext.Provider
 			value={{
-				users: state,
+				alert: state,
 				setAlert,
 			}}
 		>
