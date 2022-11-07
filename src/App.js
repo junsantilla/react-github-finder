@@ -4,6 +4,7 @@ import Footer from "./components/layout/Footer.jsx";
 import Alert from "./components/layout/Alert.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
+import User from "./pages/User.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import { GithubProvider } from "./context/github/GithubContext";
 import { AlertProvider } from "./context/alert/AlertContext";
@@ -21,6 +22,7 @@ function App() {
 							<Routes>
 								<Route path="/" element={<Home />} />
 								<Route path="/about" element={<About />} />
+								<Route path="/user/:login" element={<User />} />
 								<Route
 									path="/notfound"
 									element={<NotFound />}
