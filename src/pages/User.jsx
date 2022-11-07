@@ -24,6 +24,7 @@ function User() {
 		public_repos,
 		public_gists,
 		hireable,
+		twitter_username,
 		type,
 	} = user;
 
@@ -43,7 +44,7 @@ function User() {
 						Back to Search
 					</Link>
 				</div>
-				<div className="grid grid-cols-1 xl:grid-cols-3">
+				<div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-8 md:gap-8">
 					<div className="custom-card-image mb-6 md:mb-0">
 						<div className="shadow-xl card image-full">
 							<figure>
@@ -51,7 +52,7 @@ function User() {
 							</figure>
 						</div>
 					</div>
-					<div className="col-sopan-2 pl-5">
+					<div className="col-span-2 pl-5">
 						<div className="mb-6">
 							<h1 className="text-3xl card-title">
 								{login}
@@ -75,6 +76,40 @@ function User() {
 									Visit Github Profile
 								</a>
 							</div>
+						</div>
+						<div className="w-full rounded-lg shadow-md bg-base-100 stats">
+							{location && (
+								<div className="stat">
+									<div className="stat-title text-md">
+										Location
+									</div>
+									<div className="stat-value text-lg">
+										{location}
+									</div>
+								</div>
+							)}
+							{blog && (
+								<div className="stat">
+									<div className="stat-title text-md">
+										Website
+									</div>
+									<div className="stat-value text-lg">
+										<a href={blog} target="_blank">
+											{blog}
+										</a>
+									</div>
+								</div>
+							)}
+							{twitter_username && (
+								<div className="stat">
+									<div className="stat-title text-md">
+										Twitter
+									</div>
+									<div className="stat-value text-lg">
+										{twitter_username}
+									</div>
+								</div>
+							)}
 						</div>
 					</div>
 				</div>
