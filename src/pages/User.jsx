@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useContext } from "react";
 import GithubContext from "../context/github/GithubContext";
 import { useParams } from "react-router-dom";
+import Spinner from "../components/layout/Spinner";
 
 function User() {
 	const { user, fetchUser, loading } = useContext(GithubContext);
@@ -33,7 +34,7 @@ function User() {
 	}, []);
 
 	if (loading) {
-		return <p>Loading</p>;
+		return <Spinner />;
 	}
 
 	return (
