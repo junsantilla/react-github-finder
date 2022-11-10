@@ -5,9 +5,10 @@ import { useEffect, useContext } from "react";
 import GithubContext from "../context/github/GithubContext";
 import { useParams } from "react-router-dom";
 import Spinner from "../components/layout/Spinner";
+import RepoList from "../components/repos/RepoList";
 
 function User() {
-	const { user, fetchUser, loading } = useContext(GithubContext);
+	const { user, fetchUser, fetchRepos, loading } = useContext(GithubContext);
 
 	const params = useParams();
 
@@ -31,6 +32,7 @@ function User() {
 
 	useEffect(() => {
 		fetchUser(params.login);
+		fetchRepos(params.login);
 	}, []);
 
 	if (loading) {
@@ -152,6 +154,8 @@ function User() {
 						</div>
 					</div>
 				</div>
+
+				<RepoList />
 			</div>
 		</>
 	);
