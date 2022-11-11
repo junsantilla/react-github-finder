@@ -13,8 +13,6 @@ function User() {
 	const params = useParams();
 
 	const {
-		name,
-		company,
 		avatar_url,
 		location,
 		bio,
@@ -43,7 +41,7 @@ function User() {
 		<>
 			<div className="w-full mx-auto lg:w-10/12">
 				<div className="mb-4">
-					<Link to="/" className="btn btn-ghost">
+					<Link to="/" className="btn btn-ghost ">
 						Back to Search
 					</Link>
 				</div>
