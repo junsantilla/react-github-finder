@@ -45,15 +45,19 @@ function User() {
 						Back to Search
 					</Link>
 				</div>
-				<div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-8 md:gap-8">
+				<div className="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-4 mb-8 md:gap-8">
 					<div className="custom-card-image mb-6 md:mb-0">
-						<div className="shadow-xl card image-full">
+						<div className="shadow-xl image-full">
 							<figure>
-								<img src={avatar_url} alt="" />
+								<img
+									src={avatar_url}
+									alt="profile image"
+									className="rounded-lg"
+								/>
 							</figure>
 						</div>
 					</div>
-					<div className="col-span-2 pl-5">
+					<div className="col-span-3 pl-5">
 						<div className="mb-6">
 							<h1 className="text-3xl card-title">
 								{login}
